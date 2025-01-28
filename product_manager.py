@@ -1,16 +1,17 @@
 from product import Product
 
 class ProductManager(Product):
-    def init(self):
+    def __init__(self):
         self.products = []
-    
-    def add_product(self, product):
+
+    def add_product(self, name, price, quantity):
+        product = Product(name, price, quantity)
         self.products.append(product)
     
     def display_all_products(self):
         for p in self.products:
-            print(f"Products: {p.display_info()}")
+                print(f"Proizvod: {p.name}, Cena: {p.price}, Količina: {p.quantity}")
 
     def total_inventory_value(self):
         total_value = sum(product.price * product.quantity for product in self.products)
-        print(f"Total value of all products: {total_value}")
+        print(f"Total value of all products: {total_value}$")
