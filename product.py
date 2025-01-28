@@ -12,6 +12,8 @@ class Product:
         print(f"Updated product quantity: {self.quantity}")
 
 p1 = Product("Banana", 3, 15)
+p2 = Product("Nutella", 5, 10)
 p1.display_info()
 p1.update_quantity(5)
-p1.display_info()
+p2.display_info()
+p2.update_quantity(15)
