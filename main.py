@@ -9,3 +9,5 @@ pr_manager.add_product("Chocolate", 9, 20)
 pr_manager.display_all_products()
 pr_manager.total_inventory_value()
 
+print("Hello")
+
