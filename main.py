@@ -1,23 +1,30 @@
+import random
+from product import Product
 from product_manager import ProductManager
+from cart import Cart
 
-# Kreirana instanca na klasi ProductManager
+# Kreiranje instance klase ProductManager
 pr_manager = ProductManager()
 
-# Kreirana instanca za dodavanje informacija proizvoda
-pr_manager.add_product("Banana", 3, 15)
-pr_manager.add_product("Kiwi", 7, 10)
-pr_manager.add_product("Chocolate", 9, 20)
+# Dodavanje proizvoda sa promenjenim imenima i količinama
+pr_manager.add_product("Kajsija", 6, 15)
+pr_manager.add_product("Ananas", 10, 12)
+pr_manager.add_product("Badem", 8, 25)
+pr_manager.add_product("Nar", 5, 18)
+pr_manager.add_product("Borovnica", 7, 22)
 
-# Poziv funkcije za ispis proizvoda sa svim 
-pr_manager.display_all_products()
+# Kreiranje instance Cart
+cart = Cart()
 
-# Poziv funkcije za ispis ukupne vrijednosti inventara
-pr_manager.total_inventory_value()
+# Nasumično biramo 3 proizvoda iz liste dostupnih proizvoda
+random_products = random.sample(pr_manager.products, 3)
 
-# Poziv funkcije za brisanje proizvoda iz liste po imenu
-pr_manager.remove_product("Banana")
+# Dodajemo ih u korpu
+for product in random_products:
+    cart.add_to_cart(product)
 
-# Poziv funkcije za ispis samo imena proizvoda preko instance
-pr_manager.only_name_of_products()
+# Prikaz sadržaja korpe
+cart.display_cart_contents()
 
-
+# Računanje ukupne vrednosti korpe
+cart.total_cart_value()
