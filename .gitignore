@@ -1,3 +1,14 @@
+# Ignoriše direktorijum pycache koji sadrži kompajlirane Python fajlove
 __pycache__/
+
+# Ignoriše kompajlirane Python fajlove
 *.pyc
 *.pyo
+
+# Ignoriše config.json fajl
+config.json
+
+# Ignoriše slike (snimke ekrana)
+*.png
+*.jpg
+*.jpeg
