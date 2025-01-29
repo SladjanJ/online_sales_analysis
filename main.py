@@ -20,5 +20,4 @@ pr_manager.remove_product("Banana")
 # Poziv funkcije za ispis samo imena proizvoda preko instance
 pr_manager.only_name_of_products()
 
-print("Hello")
 
