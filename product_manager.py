@@ -10,7 +10,7 @@ class ProductManager(Product):
     
     def display_all_products(self):
         for p in self.products:
-                print(f"Proizvod: {p.name}, Cena: {p.price}, Količina: {p.quantity}")
+                print(f"Product: {p.name}; Price: {p.price}; Quantity: {p.quantity}")
 
     def total_inventory_value(self):
         total_value = sum(product.price * product.quantity for product in self.products)
@@ -20,9 +20,9 @@ class ProductManager(Product):
         for product in self.products:
             if product.name == product_name:
                 self.products.remove(product)
-                print(f"Proizvod '{product_name}' je uklonjen.")
+                print(f"Product '{product_name}' is deleted.")
                 return
-        print(f"Proizvod '{product_name}' nije pronađen.")
+        print(f"Product '{product_name}' not found.")
     
     def only_name_of_products(self):
         for product in self.products:
